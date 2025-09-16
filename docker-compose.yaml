@@ -1,0 +1,22 @@
+services:
+  kind-cli:
+    build:
+      context: .
+    container_name: kind-cli
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - kind_data:/var/lib/containerd
+    networks:
+      - lts-jenkins_jenkins-net
+    tty: true
+    stdin_open: true
+    environment:
+      - KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER=true
+
+volumes:
+  kind_data:
+
+networks:
+  lts-jenkins_jenkins-net:
+    external: true
