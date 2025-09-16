@@ -1,0 +1,9 @@
+git
+docker-workflow
+blueocean
+pipeline-aws
+credentials-binding
+ssh-slaves
+matrix-auth
+email-ext
+ws-cleanup
