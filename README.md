@@ -27,3 +27,13 @@ Jenkins Configuration Jenkins is configured with access to the Kind cluster via 
 Pipeline Execution Jenkins pipelines use kubectl to apply Kubernetes manifests, deploy containers, and manage services inside the Kind cluster.
 
 Networking Jenkins and Kind communicate via Docker networking. The cluster is exposed to Jenkins either via container IP or by mounting the kubeconfig.
+
+📚 Requirements
+ 
+ * Docker installed and running
+
+ * Kind installed (go install sigs.k8s.io/kind)
+
+ * Jenkins installed locally or in a container
+
+ * kubectl configured to point to the Kind cluster
